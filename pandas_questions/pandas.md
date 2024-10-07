@@ -1,6 +1,6 @@
 # LeetCode Pandas Questions
 
-This document contains a collection of DataFrame manipulation tasks that have been solved using Pandas. Each task includes the problem statement, a brief description, and the solution code.
+This document contains a collection of DataFrame manipulation tasks solved using Pandas. Each task includes the problem statement, a brief description, and the solution code.
 
 ## Table of Contents
 
@@ -24,8 +24,9 @@ This document contains a collection of DataFrame manipulation tasks that have be
 
 ### 1. Create DataFrame from a 2D list
 
-**Description**: Create a DataFrame with columns `student_id` and `age` using a 2D list.
+**Question**: Given a 2D list `student_data` containing student IDs and ages, create a DataFrame with columns `student_id` and `age` that maintains the order of the original list.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -35,10 +36,11 @@ def createDataframe(student_data: List[List[int]]) -> pd.DataFrame:
 
 ---
 
-### 2. Calculate number of rows and columns
+### 2. Calculate the number of rows and columns
 
-**Description**: Calculate the number of rows and columns in a DataFrame and return the result as `[rows, columns]`.
+**Question**: Given a DataFrame `players` with various columns, write a function to return the number of rows and columns as an array `[number of rows, number of columns]`.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -48,10 +50,11 @@ def getDataframeSize(players: pd.DataFrame) -> List[int]:
 
 ---
 
-### 3. Select first 3 rows of a DataFrame
+### 3. Select the first 3 rows of a DataFrame
 
-**Description**: Display the first 3 rows of a DataFrame.
+**Question**: Given a DataFrame `employees`, write a function to select and display the first 3 rows.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -63,8 +66,9 @@ def selectFirstRows(employees: pd.DataFrame) -> pd.DataFrame:
 
 ### 4. Select specific student details
 
-**Description**: Select the name and age of the student with `student_id = 101`.
+**Question**: Given a DataFrame `students` with columns `student_id`, `name`, and `age`, write a function to select the name and age of the student with `student_id = 101`.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -76,8 +80,9 @@ def selectData(students: pd.DataFrame) -> pd.DataFrame:
 
 ### 5. Create a new column based on another column
 
-**Description**: Create a `bonus` column by doubling the values in the `salary` column.
+**Question**: Given a DataFrame `employees` with a `salary` column, write a function to create a new column `bonus` that contains the values in the `salary` column doubled.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -90,8 +95,9 @@ def createBonusColumn(employees: pd.DataFrame) -> pd.DataFrame:
 
 ### 6. Drop duplicate rows based on a column
 
-**Description**: Remove duplicate rows based on the `email` column, keeping only the first occurrence.
+**Question**: Given a DataFrame `customers` with columns `customer_id`, `name`, and `email`, write a function to remove duplicate rows based on the `email` column, keeping only the first occurrence.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -103,8 +109,9 @@ def dropDuplicateEmails(customers: pd.DataFrame) -> pd.DataFrame:
 
 ### 7. Drop rows with missing values
 
-**Description**: Remove rows with missing values in the `name` column.
+**Question**: Given a DataFrame `students` with columns `student_id`, `name`, and `age`, write a function to remove rows where the `name` column has missing values.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -116,8 +123,9 @@ def dropMissingData(students: pd.DataFrame) -> pd.DataFrame:
 
 ### 8. Modify a column by multiplying values
 
-**Description**: Multiply all values in the `salary` column by 2.
+**Question**: Given a DataFrame `employees` with a `salary` column, write a function to modify the column by multiplying each salary value by 2.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -130,8 +138,9 @@ def modifySalaryColumn(employees: pd.DataFrame) -> pd.DataFrame:
 
 ### 9. Rename columns
 
-**Description**: Rename the columns in the DataFrame according to the given specifications.
+**Question**: Given a DataFrame `students` with columns `id`, `first`, `last`, and `age`, write a function to rename these columns as `student_id`, `first_name`, `last_name`, and `age_in_years`.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -148,8 +157,9 @@ def renameColumns(students: pd.DataFrame) -> pd.DataFrame:
 
 ### 10. Change column data type
 
-**Description**: Convert the `grade` column from float to integer.
+**Question**: Given a DataFrame `students` with a column `grade` stored as floats, write a function to convert the `grade` column to integers.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -162,8 +172,9 @@ def changeDatatype(students: pd.DataFrame) -> pd.DataFrame:
 
 ### 11. Fill missing values
 
-**Description**: Fill missing values in the `quantity` column with 0.
+**Question**: Given a DataFrame `products` with a column `quantity`, write a function to fill in the missing values as 0 in the `quantity` column.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -176,8 +187,9 @@ def fillMissingValues(products: pd.DataFrame) -> pd.DataFrame:
 
 ### 12. Concatenate DataFrames vertically
 
-**Description**: Concatenate two DataFrames vertically into one.
+**Question**: Given two DataFrames `df1` and `df2` with identical columns, write a function to concatenate them vertically into one DataFrame.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -189,8 +201,9 @@ def concatenateTables(df1: pd.DataFrame, df2: pd.DataFrame) -> pd.DataFrame:
 
 ### 13. Pivot DataFrame
 
-**Description**: Pivot the `weather` DataFrame so that each row represents temperatures for a specific month, and each city is a separate column.
+**Question**: Given a DataFrame `weather` with columns `city`, `month`, and `temperature`, write a function to pivot the data so that each row represents a month and each city is a separate column.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -202,8 +215,9 @@ def pivotWeatherData(weather: pd.DataFrame) -> pd.DataFrame:
 
 ### 14. Reshape DataFrame from wide to long format
 
-**Description**: Reshape the DataFrame from wide to long format, showing sales data for products per quarter.
+**Question**: Given a DataFrame `report` with columns representing sales data per quarter for each product, write a function to reshape the data so each row represents sales data for a product in a specific quarter.
 
+**Solution**:
 ```python
 import pandas as pd
 
@@ -215,8 +229,9 @@ def meltTable(report: pd.DataFrame) -> pd.DataFrame:
 
 ### 15. Filter and sort animals by weight
 
-**Description**: List the names of animals that weigh strictly more than 100 kilograms, sorted by weight in descending order.
+**Question**: Given a DataFrame `animals` with columns `name`, `species`, `age`, and `weight`, write a function to list the names of animals that weigh more than 100 kilograms, sorted by weight in descending order.
 
+**Solution**:
 ```python
 import pandas as pd
 
