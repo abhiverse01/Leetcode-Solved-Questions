@@ -5,7 +5,7 @@ This document contains a collection of DataFrame manipulation tasks solved using
 ## Table of Contents
 
 1. [Create DataFrame from a 2D list](#create-dataframe-from-a-2d-list)
-2. [Calculate number of rows and columns](#calculate-number-of-rows-and-columns)
+2. [Calculate the number of rows and columns](#calculate-number-of-rows-and-columns)
 3. [Select first 3 rows of a DataFrame](#select-first-3-rows-of-a-dataframe)
 4. [Select specific student details](#select-specific-student-details)
 5. [Create a new column based on another column](#create-a-new-column-based-on-another-column)
@@ -80,7 +80,7 @@ def selectData(students: pd.DataFrame) -> pd.DataFrame:
 
 ### 5. Create a new column based on another column
 
-**Question**: Given a DataFrame `employees` with a `salary` column, write a function to create a new column `bonus` that contains the values in the `salary` column doubled.
+**Question**: Given a DataFrame `employees` with a `salary` column, write a function to create a new column `bonus` with doubled values in the `salary` column.
 
 **Solution**:
 ```python
